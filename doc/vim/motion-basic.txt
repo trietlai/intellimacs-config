@@ -1,0 +1,40 @@
+Motion Basic
+------------
+h          # cursor left
+j          # cursor down
+l          # cursor right
+k          # cursor up
+
+H          # Jump to TOP of screen
+M          # Jump to MIDDLE of screen
+L          # Jump to BOTTOM of screen
+C-b        # Move back one full screen (page up)
+C-f        # Move forward one full screen (page down)
+C-d        # Move forward 1/2 screen; half page down
+C-u        # Move back (up) 1/2 screen; half page up
+
+w          # jump by start of words (punctuation considered words)
+e          # jump to end of words (punctuation considered words)
+b          # jump backward by words (punctuation considered words)
+0 (zero)   # start of line
+^          # first non-blank character of line
+$          # end of line
+G          # bottom of file
+gg         # top of file
+
+E          # jump to end of words (no punctuation)
+W          # jump by words (spaces separate words)
+B          # jump backward by words (no punctuation)
+#G         # goto line #
+#gg        # goto line #
+
+*          # search for word under cursor (forward) and highlight occurrence (see incsearch, hlsearch below)
+%          # jump from open/close ( / #if / ( / { to corresponding ) / #endif / } 
+gd         # jump to var declaration (see incsearch, hlsearch below)
+f<c>       # Find char <c> from current cursor position -- forwards
+F<c>       # Find char <c> from current cursor position -- backwards
+,          # Repeat previous f<c> or F<c> in opposite direction
+;          # Repeat previous f<c> or F<c> in same direction
+'.         # jump back to last edited line.
+g;         # jump back to last edited position.
+===============================================================================

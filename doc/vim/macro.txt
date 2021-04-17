@@ -1,0 +1,11 @@
+Macro
+-----
+q{register}    # Start Recording
+--do commands to record--
+q              # Stop recording
+
+@{register}    # Play recording in the register
+@@             # Play the previously played register
+
+:reg           # See values of every register
+=========================================================================================

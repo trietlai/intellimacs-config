@@ -1,0 +1,9 @@
+Cut and paste
+-------------
+yy|Y    # yank (copy) [number] of lines
+p       # put (paste) the clipboard after cursor
+P       # put (paste) before cursor
+dd      # delete (cut) [number] of lines
+D       # delete (cut) to the end of the line (same as d$)
+x       # delete (cut) character
+=========================================================================================

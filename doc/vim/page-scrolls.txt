@@ -1,0 +1,12 @@
+Page Scrolls
+------------
+^e    # Scroll the window down
+^y    # Scroll the windows up
+^f    # Scroll down one page (forward scroll)
+^b    # Scroll up one page (backward scroll)
+^d    # Scroll down 1/2 page
+^u    # Scroll up 1/2 page
+zt    # Scroll to get cursor to screen top
+zz    # Scroll to get cursor to screen center
+zb    # Scroll to get cursor to screen bottom
+=========================================================================================

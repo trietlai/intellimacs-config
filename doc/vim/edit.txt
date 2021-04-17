@@ -1,0 +1,56 @@
+Editing
+-------
+~              # switch case of character
+r              # replace a single character
+J              # join line below to the current one
+cc             # change (replace) entire line
+C              # change to the end of the line (same as c$)
+s              # delete character and substitute text
+S              # delete line and substitute text (same as cc)
+>>             # Shift [number] of lines to right
+<<             # Shift [number] of lines to left
+
+x              # Delete char UNDER cursor
+X              # Delete char BEFORE cursor
+#x             # Delete the next # chars. starting from char under cursor
+dw             # Delete next word
+dW             # Delete UP TO the next word
+d^             # Delete up unto the beginning of the line
+d$             # Delete until end of the line
+D              # See d$, delete until end of the line
+dd             # Delete whole line
+dib            # Delete contents in parenthesis '(' ')' block (e.g. function args)
+diB            # Delete inner '{' '}' block
+daB            # Delete a '{' '}' block
+das            # Delete a senctence
+diw            # Delete word under cursor
+df<c>          # Delete until next occurence of <c> (char) found (including <c>) [in single line]
+dt<c>          # Delete until next occurence of <c> (char) found (without <c>!!!) [in single line]
+
+ciw            # Change word under cursor
+ciB            # Change inner '{' '}' block
+cf<c>          # See "df<c>" but change instead of delete
+ct<c>          # See "dt<c>" but change instead of delete
+
+#J             # Merge # number of lines together
+
+gq             # (in visual-mode) format selected text according to line-width
+gqq            # format current line according to line-width
+#gqq           # format next #-lines
+
+C-n            # Keyword completion
+Tab            # Keyword completion (SuperTab plugin)
+r<c>           # Replace char <c>
+#r<c>          # Replace follow # chars with <c>, : csock, cursor on s, 3re ceeek
+
+:s/xxx/yyy/    # Replace xxx with yyy at the first occurrence
+:s/xxx/yyy/g   # Replace xxx with yyy first occurrence, global (whole sentence)
+:s/xxx/yyy/gc  # Replace xxx with yyy global with confirm
+:%s/xxx/yyy/g  # Replace xxx with yyy global in the whole file
+
+u              # Convert selection (visual mode) to lowercase
+U              # Convert selection (visual mode) to uppercase
+
+:g/^#/d        # Delete all lines that begins with #
+:g/^$/d        # Delete all lines that are empty
+===============================================================================

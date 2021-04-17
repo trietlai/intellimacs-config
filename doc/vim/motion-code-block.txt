@@ -1,0 +1,15 @@
+Code Block Movements
+--------------------
+]]   # Jump forward to begin of next toplevel
+[[   # Jump backwards to begin of current toplevel (if already there, previous toplevel)
+]m   # Jump forward to begin of next method/scope
+[m   # Jump backwords to begin of previous method/scope
+[i   # show first declartion/use of the word under cursor
+
+][   # Jump forward to end of current toplevel
+[]   # Jump backward to end of previous of toplevel
+]M   # Jump forward to end of current method/scope
+[M   # Jump backward to end of previous method/scope
+[I   # show all occurrences of word under cursor in current file
+[/   # cursor to N previous start of a C comment
+=========================================================================================

@@ -1,0 +1,24 @@
+Marking text (visual mode)
+--------------------------
+v      # start visual mode, mark lines, then do a command (like y-yank)
+V      # start linewise visual mode
+^v     # start visual block mode
+o      # move to other end of marked area
+O      # move to other corner of block
+Esc    # goto normal mode
+
+Visual commands
+---------------
+  Visual Block mode only
+  ----------------------
+I      # insert at the beginning of the selected block
+A      # insert (append) at the end of the selected block
+Esc    # Repeat the changes for all lines
+
+  For all visual selections
+  -------------------------
+>    # shift text right [number] of times
+<    # shift text left [number] of times
+
+most of eding and cut/paste command works here only for the selected text
+=========================================================================================

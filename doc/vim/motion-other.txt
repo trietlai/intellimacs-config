@@ -1,0 +1,14 @@
+Other Movements
+---------------
+gg         # go to the first line of the document
+<number>gg # go to line given by the number
+G          # go to the last line of the document
+<number>G  # go to line given by the number
+
+gd         # go to the local declaration
+gD         # go to the global declaration
+g*         # search for word contains the word under the cursor
+*          # search for word under the cursor
+g#         # g* backward
+#          # * backwards
+=========================================================================================

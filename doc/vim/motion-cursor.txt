@@ -1,0 +1,10 @@
+Cursor Movements
+----------------
+h    # move cursor left
+j    # move cursor down
+k    # move cursor up
+l    # move cursor right
+H    # move cursor to top of screen
+M    # move cursor to middle of screen
+L    # move cursor to bottom of screen
+=========================================================================================

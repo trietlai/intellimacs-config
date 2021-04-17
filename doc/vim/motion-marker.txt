@@ -1,0 +1,7 @@
+Marker Movement
+---------------
+mx    # mark 'x' at the current cursor position
+
+'x    # jump to the beginning of the line of mark 'x'
+`x    # jump to the cursor position of mark 'x'
+=========================================================================================

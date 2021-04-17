@@ -1,0 +1,29 @@
+General
+-------
+:help keyword # open help for keyword
+:o file       # open file
+:saveas file  # save file as
+:close        # close current pane
+:sh           # go to terminal which started vim (type exit to go back to vim)
+:terminal     # open new terminal in horizontal split
+:q            # close
+:w            # write/saves
+:wa[!]        # write/save all windows [force]
+:wq           # write/save and close
+:x            # save and quit, same as wq
+:q!           # force close if file has changed and not save changes
+.             # repeat last command
+v             # Enter visual mode for selection of LINES
+C-v           # Enter visual mode for selection of BLOCKS
+y             # Yank/copy selected region
+yy            # Yank/copy entire line
+"<reg>y       # Yank/copy marked region into register <reg> (register from a-z)
+c             # Cut selection
+p             # Paste yanked content
+"<reg>p       # Paste yanked content in register <reg> (from a-z)
+P             # Paste yanked content BEFORE
+u             # Undo
+C-r           # Redo
+:!<cmd>       # Execute shell command <cmd>
+C-z           # send vim to background (fg brings it to front again)
+===============================================================================

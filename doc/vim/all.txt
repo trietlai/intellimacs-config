@@ -1,0 +1,316 @@
+Content
+-------
+     * Global
+     * Command Structure
+     * Code Block
+     * Page Scrolls
+     * Macro
+     * Insert mode - inserting/appending text
+     * Editing
+     * Cut and paste
+     * Marking text (visual mode)
+     * Visual commands
+     * Search and replace
+     * Search in multiple files
+     * Exiting
+     * Working with multiple files
+     * Tabs
+
+Global
+------
+:help keyword # open help for keyword
+:o file       # open file
+:saveas file  # save file as
+:close        # close current pane
+:sh           # go to terminal which started vim (type exit to go back to vim)
+:terminal     # open new terminal in horizontal split
+.        # repeat last command
+u        # undo
+^r       # redo
+
+Command Structure
+-----------------
+   1 [count] {operator} {[count] motion|text object}
+
+  Operators that needs motions or text objects or other commands
+----------------------------------------------------------------
+v          # Visually select
+V          # Visually select entire line
+^v         # Visually select block
+y          # Yank
+d          # Delete (cut)
+c          # Change
+gu         # Change to lowercase
+gU         # Change to uppercase
+g~         # Switch case
+
+Text Objects
+------------
+   {special motion} {object}
+
+# Special Motion
+----------------
+a          # all (with whitespace)
+i          # in  (without whitespace)
+
+# Object
+w              # words
+s              # sentences
+p              # paragraphs
+t              # tags
+'|"|`          # quote
+[]|{}|()|<>    # block
+b              # For () block
+B              # For {} block
+
+Motions
+-------
+* Cursor Movements
+------------------
+h          # move cursor left
+j          # move cursor down
+k          # move cursor up
+l          # move cursor right
+H          # move cursor to top of screen
+M          # move cursor to middle of screen
+L          # move cursor to bottom of screen
+
+* Word Movements
+----------------
+w          # jump forwards to the start of a word
+W          # jump forwards to the start of a word (words can contain punctuation)
+e          # jump forwards to the end of a word
+E          # jump forwards to the end of a word (words can contain punctuation)
+b          # jump backwards to the start of a word
+B          # jump backwards to the start of a word (words can contain punctuation)
+ge         # jump backwards to the end of a word
+gE         # jump backwards to the end of a word (words can contain punctuation)
+
+* Line Movements
+----------------
+   1 0          # jump to the start of the line
+   2 ^          # jump to the first non-blank character of the line (Shift + 6)
+   3 $          # jump to the end of the line
+   4 g_         # jump to the last non-blank character of the line
+
+* Block Movements
+-----------------
+%          # jump to next parenthesis or bracket
+}          # jump to next paragraph (or function/block, when editing code)
+{          # jump to previous paragraph (or function/block, when editing code)
+(          # jump forward one sentence
+)          # jump backward one sentence
+[(         # jump cursor to previous available parenthesis
+])         # jump cursor to next available parenthesis
+[{         # jump cursor to previous available bracket
+]}         # jump cursor to next available bracket
+
+* Other Movements
+-----------------
+gg         # go to the first line of the document
+<number>gg # go to line given by the number
+G          # go to the last line of the document
+<number>G  # go to line given by the number
+
+gd         # go to the local declaration
+gD         # go to the global declaration
+g*         # search for word contains the word under the cursor
+*          # search for word under the cursor
+g#         # g* backward
+#          # * backwards
+
+* Marker Movement
+-----------------
+mx         # mark 'x' at the current cursor position
+
+'x         # jump to the beginning of the line of mark 'x'
+`x         # jump to the cursor position of mark 'x'
+
+* Undo
+------
+''         # return to the line where the cursor was before the latest jump (Two single quotes.)
+``         # return to the cursor position before the latest jump (undo the jump) (Two back ticks)
+`.         # jump to the cursor location of the last-changed line
+'.         # jump to the begining of the last-changed line
+
+^o         # undo the last jump
+
+* Characters
+------------
+   {Motion}{character}
+
+t          # til forward
+T          # til backward
+f          # find forward
+F          # find backward
+;          # repeat t,T,f,F same direction
+,          # repeat t,T,f,F other direction
+
+Code Block Movements
+--------------------
+]] Jump forward to begin of next toplevel
+[[ Jump backwards to begin of current toplevel (if already there, previous toplevel)
+]m Jump forward to begin of next method/scope
+[m Jump backwords to begin of previous method/scope
+
+][ Jump forward to end of current toplevel
+[] Jump backward to end of previous of toplevel
+]M Jump forward to end of current method/scope
+[M Jump backward to end of previous method/scope
+
+
+Page Scrolls
+------------
+^e         # Scroll the window down
+^y         # Scroll the windows up
+^f         # Scroll down one page (forward scroll)
+^b         # Scroll up one page (backward scroll)
+^d         # Scroll down 1/2 page
+^u         # Scroll up 1/2 page
+zt         # Scroll to get cursor to screen top
+zz         # Scroll to get cursor to screen center
+zb         # Scroll to get cursor to screen bottom
+
+Macro
+-----
+q{register}          # Start Recording
+--do commands to record--
+q                    # Stop recording
+
+@{register}          # Play recording in the register
+@@                   # Play the previously played register
+
+:reg                 # See values of every register
+
+Insert mode - inserting/appending text
+--------------------------------------
+i        # insert before the cursor
+I        # insert at the beginning of the line
+a        # insert (append) after the cursor
+A        # insert (append) at the end of the line
+o        # append (open) a new line below the current line
+O        # append (open) a new line above the current line
+Esc      # goto normal mode
+^o       # temporary goto normal mode from insert mode
+^r{reg}  # print the value of the register {reg}
+
+Editing
+-------
+~        # switch case of character
+r        # replace a single character
+J        # join line below to the current one
+cc       # change (replace) entire line
+C        # change to the end of the line (same as c$)
+s        # delete character and substitute text
+S        # delete line and substitute text (same as cc)
+>>       # Shift [number] of lines to right
+<<       # Shift [number] of lines to left
+
+Cut and paste
+-------------
+yy|Y        # yank (copy) [number] of lines
+p           # put (paste) the clipboard after cursor
+P           # put (paste) before cursor
+dd          # delete (cut) [number] of lines
+D           # delete (cut) to the end of the line (same as d$)
+x           # delete (cut) character
+
+Marking text (visual mode)
+--------------------------
+v        # start visual mode, mark lines, then do a command (like y-yank)
+V        # start linewise visual mode
+^v       # start visual block mode
+o        # move to other end of marked area
+O        # move to other corner of block
+Esc      # goto normal mode
+
+Visual commands
+---------------
+ Visual Block mode only
+ ----------------------
+I        # insert at the beginning of the selected block
+A        # insert (append) at the end of the selected block
+Esc      # Repeat the changes for all lines
+
+For all visual selections
+-------------------------
+>       # shift text right [number] of times
+<       # shift text left [number] of times
+
+most of eding and cut/paste command works here only for the selected text
+
+Search and replace
+------------------
+/pattern       # search for pattern
+?pattern       # search backward for pattern
+\vpattern      # 'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)
+n              # repeat search in same direction
+N              # repeat search in opposite direction
+:%s/old/new/g  # replace all old with new throughout file
+:%s/old/new/gc # replace all old with new throughout file with confirmations
+:noh           # remove highlighting of search matches
+
+Search in multiple files
+------------------------
+:vimgrep /pattern/ {file} # search for pattern in multiple files
+:cn                       # jump to the next match
+:cp                       # jump to the previous match
+:copen                    # open a window containing the list of matches
+
+Exiting
+-------
+:w              # write (save) the file, but don't exit
+:w !sudo tee %  # write out the current file using sudo
+:w file.log     # write the text to file.log
+:wq or :x or ZZ # write (save) and quit
+:q              # quit (fails if there are unsaved changes)
+:q! or ZQ       # quit and throw away unsaved changes
+
+Working with multiple files
+---------------------------
+* Commands
+  --------
+:Ex           # Open file explorer
+:e file       # edit a file in a new buffer
+:bnext | :bn  # go to the next buffer
+:bprev | :bp  # go to the previous buffer
+:bd           # delete a buffer (close a file)
+:ls           # list all open buffers
+
+:[num]sp [file]      # open a file in a new buffer and horizontal split window with height=num
+:[num]vs [file]      # open a file in a new buffer and vertically split window with width=num
+
+* Splitting and Movements
+  -----------------------
+^ws     # split window
+^wv     # split window vertically
+^wq     # quit a window
+[N]^wx  # swap position of this windows with previous (or Nth) window
+
+
+^ww     # switch windows
+^wh     # move cursor to the left window (vertical split)
+^wl     # move cursor to the right window (vertical split)
+^wj     # move cursor to the window below (horizontal split)
+^wk     # move cursor to the window above (horizontal split)
+
+* Change window size
+  ------------------
+^W  +|-      # increase/decrease height [number] of units (don't type space)
+^W  >|<      # increase/decrease width [number] of units (don't type space)
+[num]^W_     # set height to number of units (max hight if zero)
+[num]^W|     # set width to number of unites (max width if zero)
+^W=          # equalize width and height of all windows
+
+Tabs
+----
+:tabnew or :tabnew file # open a file in a new tab
+^wT                     # move the current split window into its own tab
+gt or :tabnext or :tabn # move to the next tab
+gT or :tabprev or :tabp # move to the previous tab
+<number>gt              # move to tab <number>
+:tabmove <number>       # move current tab to the <number>th position (indexed from 0)
+:tabclose or :tabc      # close the current tab and all its windows
+:tabonly or :tabo       # close all tabs except for the current one
+:tabdo command          # run the command on all tabs (e.g. :tabdo q - closes all opened tabs)
+=========================================================================================

@@ -1,0 +1,9 @@
+Exiting
+-------
+:w              # write (save) the file, but don't exit
+:w !sudo tee %  # write out the current file using sudo
+:w file.log     # write the text to file.log
+:wq or :x or ZZ # write (save) and quit
+:q              # quit (fails if there are unsaved changes)
+:q! or ZQ       # quit and throw away unsaved changes
+=========================================================================================

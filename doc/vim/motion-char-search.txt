@@ -1,0 +1,11 @@
+Character Search
+----------------
+   {Motion}{character}
+
+t    # til forward
+T    # til backward
+f    # find forward
+F    # find backward
+;    # repeat t,T,f,F same direction
+,    # repeat t,T,f,F other direction (NOT USE)
+=========================================================================================

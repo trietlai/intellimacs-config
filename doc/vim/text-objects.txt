@@ -1,0 +1,21 @@
+Text Objects
+------------
+   {special motion} {object}
+
+# Special Motion
+----------------
+
+a    # all (with whitespace)
+i    # in  (without whitespace)
+
+# Object
+--------
+w              # words
+s              # sentences
+p              # paragraphs
+t              # tags
+'|"|`          # quote
+[]|{}|()|<>    # block
+b              # For () block
+B              # For {} block
+=========================================================================================

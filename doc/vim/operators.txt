@@ -1,0 +1,12 @@
+Operators that needs motions or text objects or other commands
+--------------------------------------------------------------
+v     # Visually select
+V     # Visually select entire line
+^v    # Visually select block
+y     # Yank
+d     # Delete (cut)
+c     # Change
+gu    # Change to lowercase
+gU    # Change to uppercase
+g~    # Switch case
+=========================================================================================

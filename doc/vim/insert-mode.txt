@@ -1,0 +1,17 @@
+Insert mode - inserting/appending text
+--------------------------------------
+a        # Append text after the cursor
+A        # Append text at the end of the line
+i        # Insert text before the cursor
+I        # Insert text before the first non-blank in the line
+o        # Begin a new line BELOW the cursor and insert text
+O        # Begin a new line ABOVE the cursor and insert text
+s        # Erase the current letter under the cursor, set insert-mode
+S        # Erase the whole line, set insert-mode
+cc       # Delete the current line, set insert-mode
+cw       # Delete word, set insert-mode
+dd       # Delete line under curser
+Esc      # goto normal mode
+^o       # temporary goto normal mode from insert mode
+^r{reg}  # print the value of the register {reg}
+=========================================================================================

@@ -1,0 +1,12 @@
+Commands working with multiple files
+------------------------------------
+:Ex           # Open file explorer
+:e file       # edit a file in a new buffer
+:bnext | :bn  # go to the next buffer
+:bprev | :bp  # go to the previous buffer
+:bd           # delete a buffer (close a file)
+:ls           # list all open buffers
+
+:[num]sp [file]  # open a file in a new buffer and horizontal split window with height=num
+:[num]vs [file]  # open a file in a new buffer and vertically split window with width=num
+=========================================================================================

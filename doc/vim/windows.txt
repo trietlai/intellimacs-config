@@ -1,0 +1,26 @@
+Window Management
+-----------------
+* Splitting and Movements
+-------------------------
+^ws          # split window
+^wv          # split window vertically
+^wq          # quit a window
+[N]^wx       # swap position of this windows with previous (or Nth) window
+
+^ww          # switch windows
+^wh          # move cursor to the left window (vertical split)
+^wl          # move cursor to the right window (vertical split)
+^wj          # move cursor to the window below (horizontal split)
+^wk          # move cursor to the window above (horizontal split)
+^w ARROW     # Jump to window left/right/top/bottom (arrow keys) to the current
+
+* Change window size
+--------------------
+^w #<        # Shrink/resize current window from the right by # (default 1)
+^w #>        # Increase/resize current window to the right by # (default 1)
+^W  +|-      # increase/decrease height [number] of units (don't type space)
+^W  >|<      # increase/decrease width [number] of units (don't type space)
+[num]^W_     # set height to number of units (max hight if zero)
+[num]^W|     # set width to number of unites (max width if zero)
+^W=          # equalize width and height of all windows
+=========================================================================================
