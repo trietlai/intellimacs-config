@@ -19,7 +19,7 @@ set notimeout
 set timeoutlen=10000
 " In Windows it's important to set the font as the default = "Monospace", which doesn't exist
 let g:WhichKey_FontFamily = "JetBrains Mono, Iosevka Slab, Monospace"
-"let g:WhichKey_DefaultDelay = 500
+let g:WhichKey_DefaultDelay = 1000
 
 " some options
 " Silent the annoying bell sound
